@@ -1,69 +1,55 @@
-# Ignorar todo lo que contenga .vsc en cualquier parte del path
+# === IGNORAR TODO LO QUE CONTENGA ".vsc" EN CUALQUIER PARTE ===
 **/.vsc*/**
 **/*/.vsc*/**
 **/.vsc*/*
 **/*/.vsc*
 
-# ========== BACKEND: Spring Boot ==========
-
-# Carpetas generadas por Maven/Gradle
-target/
-build/
-
-# Archivos de configuración del IDE
-*.iml
-*.ipr
-*.iws
-.idea/
-*.log
-
-# Archivos del sistema
-.DS_Store
-Thumbs.db
+# ========== BACKEND: SPRING BOOT (STS) ==========
+# Proyecto en /soporte-tecnico-backend/
+soporte-tecnico-backend/target/
+soporte-tecnico-backend/build/
+soporte-tecnico-backend/.gradle/
+soporte-tecnico-backend/.mvn/
 
 # Archivos de entorno
-.env
-*.env
+soporte-tecnico-backend/.env
+soporte-tecnico-backend/*.env
+soporte-tecnico-backend/.env.*
 
-# Archivos de compilación de Java
-*.class
-*.jar
-*.war
+# Archivos generados por STS / Eclipse
+soporte-tecnico-backend/.project
+soporte-tecnico-backend/.classpath
+soporte-tecnico-backend/.settings/
+soporte-tecnico-backend/.factorypath
+soporte-tecnico-backend/.springBeans
+soporte-tecnico-backend/.metadata/
+soporte-tecnico-backend/.apt_generated/
+soporte-tecnico-backend/.sts4-cache/
+soporte-tecnico-backend/*.iml
+soporte-tecnico-backend/*.ipr
+soporte-tecnico-backend/*.iws
+soporte-tecnico-backend/.idea/
 
-# ========== FRONTEND: Angular ==========
+# Archivos compilados
+soporte-tecnico-backend/**/*.class
+soporte-tecnico-backend/**/*.jar
+soporte-tecnico-backend/**/*.war
+soporte-tecnico-backend/**/*.ear
 
-# Dependencias
-node_modules/
+# ========== FRONTEND: ANGULAR (VS CODE) ==========
+# Proyecto en /soporte-tecnico-frontend/
+soporte-tecnico-frontend/node_modules/
+soporte-tecnico-frontend/dist/
+soporte-tecnico-frontend/out-tsc/
+soporte-tecnico-frontend/.angular/
 
-# Compilados
-dist/
-out-tsc/
-
-# Configuraciones de entorno
-src/environments/*.ts
-!src/environments/environment.ts
-
-# Angular build artifacts
-.angular/
-
-# IDEs y editores
-.vscode/
-*.sublime-project
-*.sublime-workspace
-
-# Archivos temporales del sistema
-*.swp
-*.tmp
-*.bak
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Sistemas de pruebas
-coverage/
-test-results/
+# Archivos de entorno
+soporte-tecnico-frontend/src/environments/*.ts
+!soporte-tecnico-frontend/src/environments/environment.ts
 
 # Archivos de lock
-package-lock.json
-yarn.lock
+soporte-tecnico-frontend/package-lock.json
+soporte-tecnico-frontend/yarn.lock
+
+# Configuración de VS Code
+soporte-tecnico-frontend/.vscode/
