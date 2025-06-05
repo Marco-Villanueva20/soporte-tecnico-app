@@ -1,0 +1,69 @@
+# Ignorar todo lo que contenga .vsc en cualquier parte del path
+**/.vsc*/**
+**/*/.vsc*/**
+**/.vsc*/*
+**/*/.vsc*
+
+# ========== BACKEND: Spring Boot ==========
+
+# Carpetas generadas por Maven/Gradle
+target/
+build/
+
+# Archivos de configuración del IDE
+*.iml
+*.ipr
+*.iws
+.idea/
+*.log
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de entorno
+.env
+*.env
+
+# Archivos de compilación de Java
+*.class
+*.jar
+*.war
+
+# ========== FRONTEND: Angular ==========
+
+# Dependencias
+node_modules/
+
+# Compilados
+dist/
+out-tsc/
+
+# Configuraciones de entorno
+src/environments/*.ts
+!src/environments/environment.ts
+
+# Angular build artifacts
+.angular/
+
+# IDEs y editores
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos temporales del sistema
+*.swp
+*.tmp
+*.bak
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Sistemas de pruebas
+coverage/
+test-results/
+
+# Archivos de lock
+package-lock.json
+yarn.lock
