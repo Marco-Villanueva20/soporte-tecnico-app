@@ -64,11 +64,35 @@ Espera a que cargue el proyecto y haz clic en Finish.
 
 ### 📥 Pasos para instalar y correr
 
+1. Abrir una terminal (CMD, PowerShell o Terminal de VS Code).
+2. Ir a la carpeta del proyecto frontend. Puedes hacerlo con este comando:
+
 ```bash
 cd soporte-tecnico-frontend
+```
+
+3. (Opcional) Abrir Visual Studio Code en esa carpeta:
+
+```bash
+code .
+```
+
+4. Instalar las dependencias del proyecto Angular:
+
+```bash
 npm install
+```
+
+🔧 Este comando descargará todos los paquetes necesarios definidos en package.json.
+
+5. Ejecutar la aplicación Angular en modo desarrollo:
+
+```bash
 ng serve --open
 ```
+
+🌐 Este comando levantará el servidor de desarrollo y abrirá automáticamente el navegador en http://localhost:4200/.
+
 
 💡 El frontend está conectado al backend para consumir los endpoints REST.
 
@@ -80,10 +104,16 @@ ng serve --open
 
 ### 🛠️ ¿Cómo importarlo?
 
-1. Abre MySQL Workbench u otra herramienta.
-2. Conéctate a tu servidor MySQL.
-3. Crea una base de datos vacía (ej. soportetecnicoapp).
-4. Ejecuta el script soporte-tecnico-bd.sql.
+Sigue estos pasos para importar correctamente la estructura y datos iniciales de la base de datos en MySQL:
+
+1. Abre MySQL Workbench u otra herramienta de administración de bases de datos compatible con MySQL.
+2. Conéctate al servidor MySQL usando tu usuario y contraseña (por defecto, suele ser root y sin contraseña si es local).
+3. Haz clic en el menú File > Open SQL Script...
+4. Busca y selecciona el archivo soporte-tecnico-bd.sql que está dentro del repositorio del proyecto.
+5. El script se abrirá en una pestaña nueva. Ahora haz clic en el ícono del rayo ⚡ (o presiona Ctrl + Shift + Enter) para ejecutar el script completo.
+6. Una vez ejecutado, verifica que la base de datos y las tablas hayan sido creadas correctamente. Puedes hacerlo desde la pestaña "Schemas".
+
+💡 Importante: Asegúrate de que el archivo .sql contiene instrucciones como CREATE DATABASE y USE, para que se cree automáticamente la base y no tengas que crearla manualmente.
 
 ---
 
