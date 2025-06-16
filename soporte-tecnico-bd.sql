@@ -1,17 +1,30 @@
 CREATE DATABASE soportetecnicoapp;
 USE soportetecnicoapp;
 
-CREATE TABLE auth(
-id int primary key auto_increment,
-username varchar(50) ,
-password varchar(50),
-rol varchar(50)
+
+CREATE TABLE usuarios (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  nombres VARCHAR(50),
+  apellidos VARCHAR(50),
+  email VARCHAR(100),
+  password VARCHAR(250),
+  telefono VARCHAR(50)
 );
 
-create table usuarios(
-id int primary key auto_increment,
-nombres varchar(50),
-apellidos varchar(50),
-auth_id int not null unique,
-foreign key(auth_id) references auth(id) on delete cascade
+CREATE TABLE roles (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  nombre VARCHAR(50)
 );
+
+-- Tabla intermedia
+CREATE TABLE usuario_roles (
+  usuario_id INT,
+  rol_id INT,
+  PRIMARY KEY (usuario_id, rol_id),
+  FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE,
+  FOREIGN KEY (rol_id) REFERENCES roles(id) ON DELETE CASCADE
+);
+
+INSERT INTO roles (nombre) VALUES ('ADMIN');
+INSERT INTO roles (nombre) VALUES ('USER');
+INSERT INTO roles (nombre) VALUES ('SOPORTE');
